@@ -18,7 +18,7 @@ class ShareDraftContentFileShortcodeProviderExtension extends Extension
      * @param File|null $record
      * @param array|null $args Shortcode args as passed to FileShortcodeProvider::handle_shortcode()
      */
-    public function updateGrant(bool &$grant, ?File $record = null, ?array $args = null): void
+    protected function updateGrant(bool &$grant, ?File $record = null, ?array $args = null): void
     {
         if ($grant) {
             return;
