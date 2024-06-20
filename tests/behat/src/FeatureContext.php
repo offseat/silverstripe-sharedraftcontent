@@ -13,7 +13,7 @@ class FeatureContext extends SilverStripeContext
      */
     public function iSaveTheLinkToShareDraftContentLocalStorage()
     {
-        $key = self::KEY;
+        $key = FeatureContext::KEY;
         $js = <<<JS
             window.localStorage.setItem('{$key}', document.querySelector('.share-draft-content__link').value);
 JS;
@@ -25,7 +25,7 @@ JS;
      */
     public function iFollowTheLinkInShareDraftContentLocalStorage()
     {
-        $key = self::KEY;
+        $key = FeatureContext::KEY;
         $js = <<<JS
             window.location = window.localStorage.getItem('{$key}');
 JS;
@@ -37,7 +37,7 @@ JS;
      */
     public function iClearTheLinkFromShareDraftContentLocalStorage()
     {
-        $key = self::KEY;
+        $key = FeatureContext::KEY;
         $js = <<<JS
             window.localStorage.removeItem('{$key}');
 JS;
